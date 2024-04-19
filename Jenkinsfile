@@ -59,14 +59,16 @@ pipeline {
 
     }
 
+    // notif-jenkins@joelkoussawo.me
+
     post {
         success {
-            mail to: 'notif-jenkins@joelkoussawo.me',
+            mail to: 'clement.walshdeserrant@ynov.com',
                  subject: "Succès du Pipeline ${env.JOB_NAME} ${env.BUILD_NUMBER}",
                  body: "Le pipeline a réussi. L'application a été déployée sur Render."
         }
         failure {
-            mail to: 'notif-jenkins@joelkoussawo.me',
+            mail to: 'clement.walshdeserrant@ynov.com',
                  subject: "Échec du Pipeline ${env.JOB_NAME} ${env.BUILD_NUMBER}",
                  body: "Le pipeline a échoué. Veuillez vérifier Jenkins pour plus de détails."
         }
